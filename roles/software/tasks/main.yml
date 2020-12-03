@@ -1,0 +1,4 @@
+- name: Install required software
+  package:
+    name: "{{ software }}"
+    state: present
