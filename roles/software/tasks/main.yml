@@ -12,7 +12,7 @@
 
 - name: Set docker reg ip
   set_fact:
-    registry_ip: registry_output.stdout
+    registry_ip: "{{registry_output.stdout}}"
 
 - name: Set the insecure registry
   template:
