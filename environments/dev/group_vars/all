@@ -1,5 +1,5 @@
 ansible_become: true
-environment: "{{lookup('env','environment')}}"
+tfenv: "{{lookup('env','environment')}}"
 software:
   - git
   - python3

@@ -7,7 +7,7 @@
     state: present
 
 - name: Get Docker registry IP from TF
-  shell: "aws s3 cp s3://alacademyjenkins/{{ environment }}/terraform.tfstate - | jq -r '.outputs.docker_registry_ip.value'"
+  shell: "aws s3 cp s3://alacademyjenkins/{{ tfenv }}/terraform.tfstate - | jq -r '.outputs.docker_registry_ip.value'"
   register: registry_output
 
 - name: Set docker reg ip
