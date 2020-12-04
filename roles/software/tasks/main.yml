@@ -5,3 +5,25 @@
   package:
     name: "{{ software }}"
     state: present
+
+- name: Get Docker registry IP from TF
+  shell: "aws s3 cp s3://alacademyjenkins/{{ environment }}/terraform.tfstate - | jq -r '.outputs.docker_registry_ip.value'"
+  register: registry_output
+
+- name: Set docker reg ip
+  set_fact:
+    registry_ip: registry_output.stdout
+
+- name: Set the insecure registry
+  template:
+    src: daemon.json.j2
+    dest: /etc/docker/daemon.json
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Start docker
+  service:
+    name: docker
+    state: restarted
+    enabled: yes

@@ -9,6 +9,7 @@ software:
   - java-1.8.0-openjdk-devel
   - mariadb
   - nc
+  - docker
 jenkins_package_state: present
 jenkins_admin_username: admin
 jenkins_admin_password: admin123
