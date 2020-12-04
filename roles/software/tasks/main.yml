@@ -18,7 +18,8 @@
   debug:
     msg:
       - "CMD: {{ registry_output }}"
-      - "ENVIRONMENT: {{ tfenv}}"
+      - "ENVIRONMENT: {{ tfenv}} "
+      - "STDOUT: {{registry_ip}} "
 
 - name: Set the insecure registry
   template:
