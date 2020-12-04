@@ -27,3 +27,12 @@
     name: docker
     state: restarted
     enabled: yes
+
+- name: Add Jenkins and ec2-user to docker group
+  user:
+    name: "{{ item }}"
+    groups: docker
+    append: yes
+  with_items:
+    - jenkins
+    - ec2-user

@@ -10,6 +10,7 @@ software:
   - mariadb
   - nc
   - docker
+  - jq
 jenkins_package_state: present
 jenkins_admin_username: admin
 jenkins_admin_password: admin123
