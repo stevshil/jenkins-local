@@ -1,3 +1,6 @@
+- name: Amazon extras enable MariaDB
+  shell: amazon-extras-enable lamp-mariadb10.2-php7.2
+
 - name: Install required software
   package:
     name: "{{ software }}"
