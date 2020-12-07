@@ -5,5 +5,4 @@
     password: "{{ adminpw }}"
     url: http://localhost:8080
     user: admin
-  with_fileglob:
-    - files/*
+  with_items: "{{ jenkins_jobs }}"

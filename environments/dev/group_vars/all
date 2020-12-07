@@ -13,6 +13,11 @@ software:
   - nc
   - docker
   - jq
+jenkins_jobs:
+  - BuildPetClinic
+  - CreatePetclinicDB
+  - DeleteLaunch
+  - LaunchPetclinic
 jenkins_package_state: present
 jenkins_admin_username: admin
 jenkins_admin_password: admin123
