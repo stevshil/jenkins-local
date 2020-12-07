@@ -42,3 +42,4 @@ jenkins_plugins:
   - email-ext
   - mailer
   - maven-plugin
+  - pipeline-model-definition
