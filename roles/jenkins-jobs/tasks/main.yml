@@ -1,0 +1,9 @@
+- name: Create a jenkins job using basic authentication
+  jenkins_job:
+    config: "{{ item }}"
+    name: "{{ item }}"
+    password: "{{ adminpw }}"
+    url: http://localhost:8080
+    user: admin
+  with_fileglob:
+    - files/*

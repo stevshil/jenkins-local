@@ -3,3 +3,4 @@
   roles:
     - software
     - ansible-role-jenkins
+    - jenkins-jobs
