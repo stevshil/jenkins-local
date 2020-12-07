@@ -1,6 +1,6 @@
 - name: Create a jenkins job using basic authentication
   jenkins_job:
-    config: "{{ lookup('file', 'files/{{item}}') }}"
+    config: "{{ lookup('file', '{{role_path}}/files/{{item}}') }}"
     name: "{{ item }}"
     password: "{{ adminpw }}"
     url: http://localhost:8080
