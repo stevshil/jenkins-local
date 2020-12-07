@@ -1,5 +1,6 @@
 ansible_become: true
 tfenv: "{{lookup('env','environment')}}"
+adminpw: "admin123"
 software:
   - git
   - python3
