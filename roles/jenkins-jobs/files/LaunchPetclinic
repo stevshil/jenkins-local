@@ -25,9 +25,9 @@
           <trim>false</trim>
         </hudson.model.StringParameterDefinition>
         <hudson.model.PasswordParameterDefinition>
-          <name>DBPASSWORD</name>
+          <name>TF_VAR_db_password</name>
           <description>Database password</description>
-          <defaultValue>{AQAAABAAAAAQIoV0qh8ursZ2RAo9z7QdtaCEJQKDVB9Y3mFfZGDs+tc=}</defaultValue>
+          <defaultValue>{AQAAABAAAAAQYX7QMGJjQDJKkJGax0o297Eg+HkRP0oLIbukOxEDb7A=}</defaultValue>
         </hudson.model.PasswordParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
@@ -56,7 +56,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>export BUCKETNAME ENVIRONMENT REGION
+      <command>export BUCKETNAME ENVIRONMENT REGION TF_VAR_db_password
 cd terraform
 ./createstate</command>
       <configuredLocalRules/>
