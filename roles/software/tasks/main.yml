@@ -21,6 +21,12 @@
       - "ENVIRONMENT: {{ tfenv}} "
       - "STDOUT: {{registry_ip}} "
 
+- name: Start docker
+  service:
+    name: docker
+    state: started
+    enabled: yes
+
 - name: Set the insecure registry
   template:
     src: daemon.json.j2
@@ -28,12 +34,7 @@
     owner: root
     group: root
     mode: 0644
-
-- name: Start docker
-  service:
-    name: docker
-    state: restarted
-    enabled: yes
+  notify: restart docker
 
 - name: Add Jenkins and ec2-user to docker group
   user:
