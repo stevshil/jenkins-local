@@ -1,5 +1,6 @@
 ansible_become: true
 tfenv: "{{lookup('env','environment')}}"
+bucketname: alacademyjenkins
 adminpw: "admin123"
 software:
   - git
